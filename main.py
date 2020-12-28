@@ -5,14 +5,14 @@ t = 0
 width, height = 512, 512
 center = 256
 while t <= 2*math.pi:
-	x = 2*math.cos(t)+math.cos(2*t)
-	y = 2*math.sin(t)-math.sin(2*t)
+	x = 2*math.cos(t) + math.cos(2*t)
+	y = 2*math.sin(t) - math.sin(2*t)
 	drawx.append(x)
 	drawy.append(y)
 	t += 0.01
 for i in range(len(drawx)):
-	drawx[i] = round(drawx[i]+center)
-	drawy[i] = round(drawy[i]+center)
+	drawx[i] = round(drawx[i] + center)
+	drawy[i] = round(drawy[i] + center)
 clean_space = [[0 for j in range(width)] for i in range(height)]
 for i in range(len(drawx)):
 	clean_space[drawx[i]][drawy[i]] = 1
